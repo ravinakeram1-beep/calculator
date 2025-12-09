@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            background-color: rgb(235, 212, 155);
+            display: block;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            align-items: center;
+            font-style: italic;
+            text-decoration: underline;
+            color: black;
+            margin-top: 50px;
+
+        }
+
+        .box {
+            background-color: rgb(230, 153, 153);
+            padding: 10px;
+            width: 400px;
+            height: 300px;
+            border-radius: 10px;
+            margin-top: 100px;
+            margin-left: 460px;
+
+        }
+
+        #display {
+            width: 90%;
+            height: 40px;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid gray;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: aquamarine;
+        }
+
+        .button {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5px;
+        }
+
+        button:hover {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Calculator with the help of Javascript</h1>
+    <div class="box">
+        <input id="display" type="text" readonly>
+
+        <div class="button">
+            <button onclick="clearDisplay('AC')">AC</button>
+            <button onclick="press('%')">%</button>
+            <button onclick="clearDisplay('clear')">clear</button>
+            <button onclick="press('/')">/</button>
+
+            <button onclick="press('7')">7</button>
+            <button onclick="press('8')">8</button>
+            <button onclick="press('9')">9</button>
+            <button onclick="press('*')">*</button>
+
+            <button onclick="press('4')">4</button>
+            <button onclick="press('5')">5</button>
+            <button onclick="press('6')">6</button>
+            <button onclick="press('-')">-</button>
+
+            <button onclick="press('1')">1</button>
+            <button onclick="press('2')">2</button>
+            <button onclick="press('3')">3</button>
+            <button onclick="press('+')">+</button>
+
+            <button onclick="press('00')">00</button>
+            <button onclick="press('0')">0</button>
+            <button onclick="press('.')">.</button>
+            <button onclick="result()">=</button>
+        </div>
+    </div>
+
+
+    <script src="logic.js"></script>
+</body>
+
+</html>
